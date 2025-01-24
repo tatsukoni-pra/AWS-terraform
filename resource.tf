@@ -66,7 +66,6 @@ resource "aws_lambda_permission" "import_demo_function" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.import_demo_function.function_name
   principal     = "events.amazonaws.com"
-  source_arn    = aws_cloudwatch_event_rule.import_demo_function.arn
 }
 
 resource "aws_lambda_function" "import_demo_function_v2" {
